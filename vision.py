@@ -27,7 +27,7 @@ def process(img):
     ratios = []
     for box in boxes: # loop through corner pts
         area = boxes[0] * boxes[1]
-        ratios.append((area-expected_area) / expected_area)
+        ratios.append((expected_area - area) / expected_area)
 
     return ratios
 
